@@ -1,0 +1,160 @@
+
+  <div class="navbar navbar-fixed-top" style="background-color: rgb(24, 24, 129);color:white;height:40px">
+    <div class="row">
+
+      <div class="col-lg-7">
+        <div class="edge">
+          <i class="fa fa-bars" style="font-size:24px"></i>&nbsp;&nbsp;
+
+          <button class="menu"><i class="fa fa-user-circle-o" style="font-size:24px"></i></button> &nbsp;&nbsp;&nbsp;
+
+          <strong style="font-size: 20px;margin-top:15px;">CuteHR</strong>
+        </div>
+      </div>
+      <div class="col-lg-9 ">
+
+      </div>
+      <div class="col-lg-1" style="margin-left: 860px;height:45px;">
+</div>
+    </div>
+  </div>
+<div style="margin-top: 3.5%;">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="dash-board">
+          <ul>
+            <li><strong style="font-size: 17px;">Your Apps</strong></li><br>
+            <li class="li" (click)="setAlert()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-clock-o" ></i>&nbsp;&nbsp;&nbsp;
+                  <label style="font-size: 14px;">Timer</label><br><br>
+                </div>
+
+              </div>
+            </li>
+            <li class="li" (click)="setAlert()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-windows" ></i>&nbsp;&nbsp;&nbsp;
+                  <label style="font-size: 14px;">Projects</label><br><br>
+                </div>
+              </div>
+            </li>
+            <li class="li" (click)="setAlert()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-edit" ></i>
+
+                  &nbsp;&nbsp;&nbsp;<label style="font-size: 14px;">Reports</label><br><br>
+
+                  
+                </div>
+              </div>
+            </li>
+            <li><strong style="font-size: 17px;">Your Company</strong></li><br>
+            <li class="li" (click)="makeShowEmployeesTrue()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-users"></i>
+
+                  &nbsp;&nbsp;&nbsp;<span class="button" style="font-size: 14px;">Employees</span><br><br>
+                </div>
+              </div>
+            </li>
+           
+            <li class="li" (click)="setAlert()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-user" ></i>
+
+                  &nbsp;&nbsp;&nbsp;<label style="font-size: 14px;">ApplicantTracking</label><br><br>
+                </div>
+              </div>
+            </li>
+          
+            <li class="li" (click)="setAlert()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-dollar" ></i>
+
+                  &nbsp;&nbsp;&nbsp;<label style="font-size: 14px;">Invoice</label><br><br>
+                </div>
+              </div>
+            </li>
+           
+            <li class="li" (click)="setAlert()">
+              <div style="display: flex;">
+                <div>
+                  <i class="fa fa-cog" ></i>
+
+                  &nbsp;&nbsp;&nbsp;<label style="font-size: 14px;">Settings</label> &nbsp;&nbsp;&nbsp;<br><br>
+                 
+                </div>
+              </div>
+            </li>
+           
+
+
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="displayemployee && !emp_rec" class="col-lg-8 col-md-8 col-sm-8 employee-info">
+
+        
+        
+        <div style="margin-top:30px">
+          <div class="emp-table-data">
+            <table class="table">
+              <thead>
+                <tr style="height: 30px;">
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr *ngFor="let emp of empl_data" (click)="getShowData(emp)">
+                  <td>{{emp.id}}</td>
+                  <td><img src={{emp.avatar}} />{{emp.first_name+' '+emp.last_name}}</td>
+                  <td>{{emp.email}}</td>
+                </tr>
+              </tbody>
+
+            </table>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="emp_rec" class="col-lg-8 col-md-8 col-sm-8 employee-info">
+
+
+        <table class="table">
+
+          <tr>
+            <td>ID</td>
+            <td>{{display_data.id}}</td>
+          </tr>
+          <tr>
+            <td>FirstName</td>
+
+            <td>{{display_data.first_name}}</td>
+          </tr>
+          <tr>
+            <td>LastName</td>
+            <td>{{display_data.last_name}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{display_data.email}}</td>
+          </tr>
+          <tr>
+            <td>Photo Id</td>
+            <td><img src={{display_data.avatar}} /></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+

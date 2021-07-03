@@ -1,0 +1,126 @@
+.edge{
+    
+    height:50px;
+    width:301px;
+}
+ul {
+    list-style-type: none;
+    top:5%;
+    padding-top:8%;
+    position:fixed;
+    overflow: hidden;
+    display:block;
+    box-shadow: 5px 5px 5px 0px grey;
+    height:100%;
+    position: inherit;
+
+}
+div {
+    font-weight: bold;
+}
+.li {
+    padding:6px 0px
+}
+.li:hover {
+    background-color: rgb(189, 196, 199);
+}
+.dash-board {
+    height:96%;
+    background-color: white;
+}
+.button {
+    
+    text-align: left;
+}
+
+.emp-cmp-title {
+    font-weight: bold;
+}
+
+.li:hover {
+    background-color: rgb(189, 196, 199);
+    border-right:1px solid darkblue;
+}
+
+.menu,i {
+    background:transparent;
+    width:25px;
+    padding-top: 10px;
+    outline:0;
+    border:0
+
+}
+ .employee-info {
+    margin-top:1%;
+    margin-left:4%;
+    box-shadow: 5px 1px 5px 5px grey;
+    height:550px;
+    overflow-y:scroll;
+    
+}
+
+
+
+img {
+    width:8%;
+    border-radius:20px;
+    margin-right:20px;
+}
+div:hover {
+    cursor: pointer;
+}
+select:hover {
+    cursor: pointer;
+}
+
+.emp_live_org{
+    
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    padding-top:5px;
+    padding-bottom: 5px;
+    border:1px solid rgb(92, 92, 168);
+    background-color: rgb(227, 227, 236);
+    border-radius: 10px;
+
+}
+.emp_live_org:hover {
+    border-bottom:0px;
+    background-color:white;
+}
+.search-add {
+    height:35px;
+    border-radius: 10px;
+    width:150px;
+}
+.active{
+    height:35px;
+    border-radius: 10px;
+    width:70px;
+   
+}
+select {
+    margin-left: 1%;
+    font-weight: bold;
+    border:1px solid grey;
+}
+
+ 
+
+.add_import {
+    border:1px solid grey;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+td {
+    padding-left:20px
+}
+i {
+    padding:3px;
+}
